@@ -361,15 +361,17 @@ header{
 }
 .box-carousel{
     position: relative;
+    overflow: hidden;
 }
 .button-carousel{
     position: absolute;
+    z-index: 1;
 }
-.button-left-carousel{
+.button_left_carousel{
     top: 45%;
     left: 9%;
 }
-.button-right-carousel{
+.button_right_carousel{
     right: 9%;
     top: 45%;
 }
@@ -382,8 +384,9 @@ header{
     display: flex;
     gap: 16px;
     overflow: auto;
-    align-items: stretch;
-    justify-content: flex-end;
+    position: relative;
+    left: 35%;
+    transition: all ease 2s;
 }
 .carousel-room{
     width: 340px;
@@ -629,15 +632,6 @@ footer p{
     }
     .list-container {
         border-radius: 0px 0px 9px 9px;
-    }
-    .room-3{
-        display: none;
-    }
-    .room-2{
-        display: none;
-    }
-    .carousel {
-        justify-content: center;
     }
     .recommendation-container {
         width: 44%;
