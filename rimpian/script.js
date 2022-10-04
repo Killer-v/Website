@@ -35,7 +35,6 @@ left_button.addEventListener('click', function (event) {
 });
 
 function moveLastElementToFront() {
-   1
    const lastElementID = carousel.children.length - 1;
    const lastElement = carousel.children[lastElementID];
 
