@@ -375,45 +375,43 @@ header{
     right: 9%;
     top: 45%;
 }
-.button-carousel input{
-    background: #00985B;
-    padding: 15px 23px;
+.button-carousel{
+    display: block;
+    text-decoration: none;
+    width: 61px;
+    height: 61px;
     border-radius: 100%;
+    position: absolute;
+    top: 207px;
+    z-index: 3;
+}
+#button_left_carousel{
+    left: 93px;
+    background: #00985B url(img/button-left-carousel.svg) no-repeat 50% 50%;
+}
+#button_right_carousel{
+    right: 93px;
+    background: #00985B url(img/button-right-carousel.svg) no-repeat 50% 50%;
 }
 .carousel{
-    display: flex;
-    gap: 16px;
-    overflow: auto;
+    width: 1000000px;
     position: relative;
-    left: 35%;
     transition: all ease 2s;
 }
 .carousel-room{
+    float: left;
     width: 340px;
     height: 480px;
-}
-.carousel-room:hover .room{
-    display: flex;
-}
-.room-1{
-    background-image: url(img/carousel-room-1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    overflow: hidden;
 }
-.room-2{
-    background-image: url(img/carousel-room-2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.room-3{
-    background-image: url(img/carousel-room-3.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.room-4{
-    background-image: url(img/carousel-room-4.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+.carousel-room img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
 }
 .room{
     background: rgba(0, 0, 0, 0.5);
@@ -423,6 +421,11 @@ header{
     align-items: center;
     justify-content: center;
     display: none;
+    position: relative;
+    z-index: 2;
+}
+.carousel-room:hover .room{
+    display: flex;
 }
 .room h2{
     color: #fff;
@@ -582,9 +585,9 @@ footer p{
     }
 }
 @media (max-width: 1071px){
-    .room-4{
+    /* .room-4{
         display: none;
-    }
+    } */
     .box-navigation {
         align-items: center;
         gap: 20px;
