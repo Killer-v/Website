@@ -174,7 +174,6 @@ footer{
 @media (max-width: 629px){
     .navigation a {
         text-decoration: none;
-        color: #19191B;
         font-weight: 500;
         font-size: 22px;
         border-radius: 10px;
@@ -197,7 +196,6 @@ footer{
         justify-content: center;
         align-items: center;
         gap: 9px;
-        color: #3D3D3D;
         flex-direction: column;
     }
     .social {
@@ -227,6 +225,6 @@ footer{
         font-size: 18px;
     }
     .header-box {
-        margin-top: 22px;
+        margin-top: 60px;
     }
 }
