@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    background-color: #0F1113;
+    font-family: Inter, sans-serif;
+    color: white;
+}
+
+header {
+    display: flex;
+    border-bottom: 1px solid #313135;
+}
+
+.icon {
+    width: 15%;
+    background-color: #181C1F;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.icon h1 {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 80%;
+}
+
+.profile-container h1 {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.profile-box {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+}
+
+.notice-chat {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    padding: 13px;
+    width: 22px;
+    height: 22px;
+}
+
+.profile-button {
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    align-items: center;
+    gap: 26px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.profile-button div h3 {
+    margin: 0;
+}
+
+.profile-button div p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.profile-button div p img {
+    width: 15px;
+}
+
+.profile-button img {
+    width: 41px;
+    border-radius: 50%;
+}
+
+.dropdown-content {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    z-index: 99;
+}
+
+.navigation-container {
+    width: 15%;
+    background-color: #181C1F;
+}
+
+.navigation-container a {
+    display: flex;
+    gap: 27px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+}
+.navigation-container a img{
+    width: 23px;
+    padding-left: 10px;
+}
+.navigation-container a:hover {
+    background: rgba(255, 151, 29, 0.1);
+    border-radius: 5px;
+    color: #FF971D;
+}
+.navigation-box {
+    border-bottom: 1px solid #313135;
+    padding: 25px;
+}
+.navigation-box-2{
+    padding: 25px;
+}
+.button-upgrade{
+    margin-top: 30px;
+}
