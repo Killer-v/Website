@@ -3,10 +3,10 @@ let switchMode = document.getElementById("button_dark");
 switchMode.onclick = function () {
     let theme = document.getElementById("theme");
 
-    if (theme.getAttribute("href") == "style.css") {
-        theme.href = "darkStyle.css";
+    if (theme.getAttribute("href") == "style/style.css") {
+        theme.href = "style/darkStyle.css";
     } else {
-        theme.href = "style.css";
+        theme.href = "style/style.css";
     }
 }
 
