@@ -6,7 +6,6 @@ body {
     color: white;
 }
 
-
 header {
     display: flex;
     border-bottom: 1px solid #313135;
@@ -129,8 +128,9 @@ header {
     display: flex;
     gap: 18px;
     text-decoration: none;
-    font-size: 87%;
     color: rgba(255, 255, 255, 0.6);
+    padding-left: 10px;
+    margin-bottom: 10px;
 }
 
 .navigation-container a img {
@@ -194,9 +194,10 @@ header {
 }
 
 .exchange-box {
+    width: 28%;
     background-color: #181C1F;
     display: flex;
-    gap: 55px;
+    justify-content: space-around;
     padding: 20px;
     border: 3px solid;
     border-image: linear-gradient(140deg, #C26C04 -109.43%, #181C1F 53.76%, #C26C04 254.2%, #181C1F 13.51%) 1;
@@ -204,6 +205,9 @@ header {
 
 .exchange-box .schedule {
     margin-top: 10%;
+    width: 30%;
+    height: auto;
+    max-height: 100%;
 }
 
 .exchange p {
@@ -217,8 +221,17 @@ header {
 
 .exchange-text h2 {
     color: rgba(255, 255, 255, 0.6);
-    font-size: 24px;
     line-height: 29px;
+}
+
+.exchange-text img {
+    width: 26%;
+    height: auto;
+    min-height: 100%;
+}
+
+.contant-body {
+    width: 85%;
 }
 
 .center-container {
@@ -227,6 +240,10 @@ header {
     flex-direction: column;
     margin-top: 69px;
     background: rgba(24, 28, 31, 1);
+}
+
+.right-container {
+    width: 23%;
 }
 
 .search-box {
@@ -547,6 +564,11 @@ th {
     margin-bottom: 30px;
 }
 
+.trade-box img {
+    width: 100%;
+    height: auto;
+}
+
 .trade {
     padding: 10px;
     display: flex;
@@ -585,8 +607,11 @@ th {
 
 .trage-button a {
     text-decoration: none;
-    padding: 19px 69px;
+    width: 100%;
     color: white;
+    height: auto;
+    text-align: center;
+    padding: 15px;
 }
 
 .trage-button a:first-child {
@@ -818,7 +843,8 @@ th {
     padding: 18px;
     border-radius: 6px;
 }
-.earnings-container{
+
+.earnings-container {
     background-color: rgba(24, 28, 31, 1);
     margin-top: 69px;
     padding: 30px;
@@ -826,17 +852,656 @@ th {
     display: grid;
     gap: 25px;
 }
-.earnings-date{
+
+.earnings-container .earnings-img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+}
+
+.earnings-date {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.earnings-date .dropdown-chart a{
+
+.earnings-date .dropdown-chart a {
     padding: 0 10px;
     color: rgba(255, 255, 255, 0.6);
 }
-.earnings-date h1{
+
+.earnings-date h1 {
     font-weight: 600;
-    font-size: 24px;
     line-height: 29px;
+}
+
+@media (max-width: 1550px) {
+    .trade-box {
+        display: grid;
+        gap: 16px;
+        margin-bottom: 0px;
+    }
+
+    .trade p {
+        margin: 0;
+    }
+
+    .history-container,
+    .transfer-container,
+    .earnings-container {
+        margin-top: 30px;
+    }
+
+    .contant-body {
+        width: 90%;
+    }
+
+    .icon {
+        width: 10%;
+    }
+
+    .icon img {
+        margin-left: 15%;
+        width: 19px;
+    }
+
+    .icon h1 {
+        font-size: 12px;
+    }
+
+    .profile-button {
+        gap: 9px;
+    }
+
+    .profile-button img {
+        width: 24px;
+    }
+
+    .profile-button div h3 {
+        font-size: 10px;
+    }
+
+    .profile-button div p {
+        font-size: 10px;
+    }
+
+    .notice-chat img {
+        width: 15px;
+        margin: 0%;
+    }
+
+    .notice-chat {
+        width: 15px;
+        height: auto;
+    }
+
+    .navigation-container {
+        width: 10%;
+    }
+
+    .navigation-container a img {
+        width: 13px;
+        padding-left: 0px;
+    }
+
+    .upgrade-fon {
+        width: -webkit-fill-available;
+    }
+
+    .upgrade-fon-2 {
+        top: 15%;
+        left: 25%;
+        width: 60%;
+        height: auto;
+    }
+
+    .button-upgrade a {
+        padding: 6px;
+        position: absolute;
+        z-index: 1;
+        top: 68%;
+        left: 13%;
+        font-size: 16px;
+        line-height: 15px;
+        color: #0F1113;
+        background: #FF971D;
+        border-radius: 5px;
+    }
+
+    .button-upgrade {
+        width: 100%;
+    }
+
+    .exchange-box {
+        gap: 28px;
+    }
+
+    .search {
+        font-size: 14px;
+        padding: 11px 8px 11px 8px;
+        width: 83%;
+    }
+
+    .search-box img {
+        width: 97%;
+        height: auto;
+        max-height: 100%;
+    }
+
+    .report-week img {
+        width: 14%;
+        height: auto;
+        max-height: 100%;
+    }
+
+    .report-month img {
+        width: 14%;
+        height: auto;
+        max-height: 100%;
+        background: rgba(248, 71, 71, 0.15);
+        border-radius: 5px;
+        padding: 16px;
+    }
+
+    .chart-img {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+    }
+
+    .table {
+        height: 536px;
+        overflow: auto;
+    }
+
+    td {
+        padding: 5px 42px 5px 0;
+    }
+
+    .navigation-box-2 a {
+        margin: 0px 10px;
+    }
+
+    .navigation-box {
+        padding: 10px;
+    }
+
+    .button-upgrade a {
+        margin: 0;
+    }
+
+    .button-upgrade {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 1900px) {
+
+    h1,
+    h2 {
+        font-size: calc(14px + (18 - 14) * ((100vw - 480px) / (1024 - 480)));
+    }
+
+    .navigation-container a p {
+        font-size: calc(4px + (18 - 14) * ((100vw - 480px) / (1024 - 480)));
+    }
+}
+
+@media (max-width: 1355px) {
+    .trade-text-box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .trade p {
+        margin: 0;
+    }
+
+    .trade-container,
+    .history-container,
+    .transfer-container,
+    .earnings-container {
+        padding: 19px;
+    }
+
+    .upgrade-fon-2 {
+        top: 22%;
+        left: 28%;
+        width: 50%;
+        height: auto;
+    }
+
+    .upgrade-fon-2 {
+        top: 20%;
+        left: 28%;
+        width: 50%;
+        height: auto;
+    }
+
+    .button-upgrade a {
+        font-size: 10px;
+        line-height: 16px;
+    }
+}
+
+@media (max-width: 1230px) {
+    .exchange-text h2 {
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 5px;
+    }
+
+    .exchange-box {
+        gap: 0px;
+    }
+
+    tbody {
+        font-family: Poppins, sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    td {
+        padding: 7px 28px 5px 0px;
+        margin: 0;
+    }
+
+    tr td:first-child div p {
+        margin: 0;
+    }
+
+    .color-table {
+        margin: 0px;
+    }
+
+    .report {
+        padding: 10px;
+        gap: 18px;
+    }
+
+    .button-upgrade a {
+        left: 21%;
+    }
+
+    .chart-radio-box label {
+        font-size: 11px;
+    }
+
+    input[type='radio']:after {
+        top: 3px;
+    }
+
+    .navigation-container {
+        width: 126px;
+    }
+
+    .icon {
+        width: 126px;
+    }
+
+    .amount input {
+        width: 49%;
+    }
+
+    .history-box {
+        padding: 10px;
+    }
+
+    .history-text div {
+        margin-bottom: 10px;
+    }
+
+    .profile-button-chart img {
+        width: 13px;
+    }
+
+    .exchange-text img {
+        width: 17%;
+    }
+
+    .exchange-box {
+        width: 26%;
+    }
+
+    .history-date a {
+        padding: 8px 8px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .navigation-container a p {
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+        position: absolute;
+    }
+
+    .button-upgrade {
+        margin-left: 0;
+        display: none;
+    }
+
+    .navigation-container {
+        width: 56px;
+    }
+
+    .navigation-container a img {
+        width: 17px;
+    }
+
+    .navigation-container a {
+        padding-left: 10px;
+        padding: 10px;
+        margin-bottom: 12px;
+    }
+
+    .icon {
+        width: 56px;
+        background-color: #181C1F;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .icon img {
+        margin: 0;
+    }
+
+    .icon h1 {
+        margin: 0;
+    }
+
+    .contant-body {
+        width: 100%;
+    }
+
+    .profile-container {
+        width: 90%;
+    }
+
+    .exchange-container {
+        margin-top: 22px;
+    }
+
+    .center-container {
+        width: 67%;
+    }
+
+    .right-container {
+        width: 29%;
+    }
+
+    td {
+        font-size: 10px;
+        padding: 7px 32px 5px 0px;
+    }
+
+    tr td:first-child div p {
+        font-size: 10px;
+    }
+
+    thead th {
+        font-size: 12px;
+    }
+
+    .recent-trading-container,
+    .chart {
+        padding: 19px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .report-search {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .report {
+        padding: 10px;
+        gap: 35px;
+    }
+
+    .report-box {
+        width: 90%;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .chart-text p {
+        font-size: 12px;
+    }
+
+    .chart-text h1 {
+        font-size: 20px;
+    }
+
+    .profile-button-chart p {
+        font-size: 11px;
+    }
+
+    .time-recent-trading a {
+        padding: 9px 15px;
+        font-size: 13px;
+    }
+
+    .recent-trading-text h1 {
+        font-size: 19px;
+        line-height: 30px;
+    }
+
+    .recent-trading-text p {
+        font-size: 11px;
+        line-height: 14px;
+    }
+
+    td {
+        font-size: 10px;
+        padding: 6px 19px 5px 0px;
+    }
+
+    .report-box {
+        width: 87%;
+    }
+}
+
+@media (max-width: 950px) {
+    .content {
+        display: flex;
+        gap: 30px;
+        flex-direction: column-reverse;
+    }
+
+    .right-container {
+        width: auto;
+        display: grid;
+        grid-template-areas: "trade history"
+            "transfer history"
+            "transfer earnings";
+        justify-items: stretch;
+        align-items: stretch;
+        margin: 30px;
+        gap: 30px;
+    }
+
+    .trade-container {
+        grid-area: trade;
+    }
+
+    .history-container {
+        grid-area: history;
+    }
+
+    .transfer-container {
+        grid-area: transfer;
+    }
+
+    .earnings-container {
+        grid-area: earnings;
+    }
+
+    .trade-container,
+    .history-container,
+    .transfer-container,
+    .earnings-container {
+        margin: 0;
+    }
+
+    .center-container {
+        width: auto;
+    }
+
+    .report-search {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .report-box {
+        width: 38%;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .center-container {
+        margin-top: 0;
+    }
+
+    .table {
+        height: 322px;
+    }
+
+    td {
+        font-size: 10px;
+        padding: 6px 43px 5px 0px;
+    }
+}
+
+@media (max-width: 800px) {
+    td {
+        padding: 6px 30px 5px 0px;
+    }
+
+    .exchange-box .schedule {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    td {
+        padding: 6px 20px 5px 0px;
+    }
+
+    .report-search {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .report {
+        padding: 10px;
+        gap: 35px;
+    }
+
+    .report-box {
+        width: 90%;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .report {
+        gap: 16px;
+    }
+
+    .report-box {
+        width: auto;
+    }
+
+    .exchange-box {
+        width: 37%;
+    }
+
+    .exchange-container {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .exchange-box .schedule {
+        display: block;
+    }
+
+    td {
+        padding: 6px 8px 5px 0px;
+    }
+
+    thead th {
+        font-size: 9px;
+    }
+
+    .chart {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .right-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        align-items: center;
+    }
+
+    .trade-container,
+    .history-container,
+    .transfer-container,
+    .earnings-container {
+        width: 65%;
+    }
+    .search-box img {
+        width: 100%;
+    }
+    .profile-container h1 {
+        font-size: 14px;
+    }
+}
+@media (max-width: 519px){
+    .profile-box {
+        gap: 17px;
+    }
+    .profile-container {
+        width: 81%;
+    }
+    .report-box {
+        width: auto;
+        display: none;
+    }
+}
+@media (max-width: 475px){
+    .recent-trading-text h1 {
+        font-size: 15px;
+        line-height: 19px;
+    }
+    .exchange-box {
+        width: 75%;
+    }
+    .trade-container, .history-container, .transfer-container, .earnings-container {
+        width: 88%;
+    }
+    td {
+        padding: 6px 5px 5px 0px;
+    }
+    .contant-body {
+        width: 88%;
+    }
 }
