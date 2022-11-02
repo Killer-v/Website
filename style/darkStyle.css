@@ -132,6 +132,8 @@ header {
 
 .website {
     position: relative;
+    border-radius: 15px;
+    height: 226px;
 }
 
 .website img {
@@ -166,8 +168,8 @@ header {
 .website:hover a {
     display: block;
     background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
-            rgba(255, 255, 255, 0.6),
-            transparent 40%);
+            rgba(255, 255, 255, 0.4),
+            transparent 30%);
     border-radius: inherit;
     content: "";
     height: 100%;
@@ -176,6 +178,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 3;
+    border-radius: 15px;
 }
 
 .my_works {
