@@ -63,6 +63,11 @@ header {
     height: 22px;
 }
 
+.notice-chat-container {
+    display: flex;
+    gap: 20px;
+}
+
 .notice-chat img {
     width: 18px;
     margin: 9%;
@@ -99,6 +104,10 @@ header {
     border-radius: 50%;
 }
 
+.profile-button-exit {
+    gap: 10px;
+}
+
 .dropdown-content {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     visibility: hidden;
@@ -107,10 +116,17 @@ header {
     position: absolute;
 }
 
-.dropdown:focus .dropdown-content {
+.dropdown:hover .dropdown-content {
     visibility: visible;
     opacity: 1;
     z-index: 99;
+}
+
+.dropdown:hover .dropdown-content .profile-button {
+    visibility: visible;
+    opacity: 1;
+    z-index: 99;
+    background: rgba(24, 28, 31, 1);
 }
 
 .content-body {
@@ -236,14 +252,25 @@ header {
 
 .center-container {
     width: 73%;
+    height: auto;
     display: flex;
     flex-direction: column;
+    gap: 30px;
     margin-top: 69px;
-    background: rgba(24, 28, 31, 1);
+    margin-left: 30px;
+    background: #0F1113;
+}
+
+.report-search,
+.chart,
+.recent-trading-container {
+    height: 100%;
+    border-radius: 10px;
 }
 
 .right-container {
     width: 23%;
+    margin-right: 30px;
 }
 
 .search-box {
@@ -251,8 +278,9 @@ header {
 }
 
 .search-box img {
-    height: 100%;
-    width: auto;
+    height: auto;
+    max-height: 100%;
+    width: 100%;
 }
 
 .search {
@@ -273,6 +301,8 @@ header {
 .report-search {
     display: flex;
     justify-content: space-around;
+    padding: 30px 0;
+    background: rgba(24, 28, 31, 1);
 }
 
 .report-box {
@@ -306,6 +336,14 @@ header {
 
 .report-text p {
     margin: 0;
+}
+
+.report-month img {
+    height: auto;
+    max-height: 100%;
+    background: rgba(248, 71, 71, 0.15);
+    border-radius: 5px;
+    padding: 16px;
 }
 
 .report-week .color {
@@ -374,7 +412,7 @@ input[type='radio']:checked:after {
     gap: 10px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.15);
-    margin: 5px;
+    background-color: rgba(24, 28, 31, 1);
 }
 
 .profile-button-chart a p {
@@ -394,14 +432,21 @@ input[type='radio']:checked:after {
     position: absolute;
 }
 
+.dropdown-chart {
+    width: 169px;
+}
+
 .dropdown-chart:hover .dropdown-content-chart {
     visibility: visible;
     opacity: 1;
     z-index: 99;
+    width: inherit;
 }
 
 .chart {
     padding: 60px;
+    background: rgba(24, 28, 31, 1);
+
 }
 
 .chart-img {
@@ -426,6 +471,8 @@ input[type='radio']:checked:after {
 
 .recent-trading-container {
     padding: 60px;
+    background: rgba(24, 28, 31, 1);
+
 }
 
 .recent-trading-time {
@@ -475,8 +522,14 @@ input[type='radio']:checked:after {
     border-radius: 5px;
 }
 
+.time-recent-trading .active {
+    color: rgba(24, 28, 31, 1);
+    background: rgba(255, 151, 29, 1);
+    border-radius: 5px;
+}
+
 .table {
-    height: 400px;
+    height: 50vh;
     overflow: auto;
 }
 
@@ -542,7 +595,9 @@ th {
 
 .content {
     display: flex;
+    align-items: stretch;
     gap: 30px;
+    margin-bottom: 30px;
 }
 
 .trade-container {
@@ -875,7 +930,28 @@ th {
     line-height: 29px;
 }
 
-@media (max-width: 1550px) {
+.earnings-date .dropdown-chart {
+    width: auto;
+}
+
+@media (max-width: 1940px) {
+    .search {
+        position: absolute;
+        z-index: 1;
+        top: 6%;
+        left: 5%;
+        font-size: 22px;
+        line-height: 27px;
+        background-color: #22282C;
+        color: rgba(255, 255, 255, 0.8);
+        outline: none;
+        border: none;
+        padding: 15px 15px 15px 15px;
+        width: 85%;
+    }
+}
+
+@media (max-width: 1585px) {
     .trade-box {
         display: grid;
         gap: 16px;
@@ -1010,7 +1086,7 @@ th {
     }
 
     .table {
-        height: 536px;
+        height: 340px;
         overflow: auto;
     }
 
@@ -1047,13 +1123,20 @@ th {
     }
 }
 
-@media (max-width: 1355px) {
+@media (max-width: 1455px) {
+    .amount input {
+        width: 71px;
+    }
+
     .trade-text-box {
         display: flex;
         align-items: center;
         flex-direction: column;
         margin-bottom: 20px;
     }
+}
+
+@media (max-width: 1385px) {
 
     .trade p {
         margin: 0;
@@ -1086,10 +1169,23 @@ th {
     }
 }
 
-@media (max-width: 1230px) {
+@media (max-width: 1295px) {
     .exchange-text h2 {
         color: rgba(255, 255, 255, 0.6);
         line-height: 5px;
+    }
+
+    .chart-text p {
+        font-weight: 400;
+        font-size: 13px;
+    }
+
+    input[type='radio']:checked:after {
+        top: 2px;
+    }
+
+    input[type='radio']:after {
+        top: 2px;
     }
 
     .exchange-box {
@@ -1129,10 +1225,6 @@ th {
         font-size: 11px;
     }
 
-    input[type='radio']:after {
-        top: 3px;
-    }
-
     .navigation-container {
         width: 126px;
     }
@@ -1170,7 +1262,7 @@ th {
     }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1230px) {
     .navigation-container a p {
         visibility: hidden;
         opacity: 0;
@@ -1251,9 +1343,7 @@ th {
     .chart {
         padding: 19px;
     }
-}
 
-@media (max-width: 1080px) {
     .report-search {
         display: flex;
         justify-content: space-around;
@@ -1271,6 +1361,18 @@ th {
         flex-direction: row;
         gap: 20px;
         align-items: center;
+    }
+
+    .search-box img {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+    }
+}
+
+@media (max-width: 1106px) {
+    .dropdown-chart {
+        width: 114px;
     }
 
     .chart-text p {
@@ -1308,9 +1410,12 @@ th {
     .report-box {
         width: 87%;
     }
+    .chart-box {
+        gap: 21px;
+    }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 986px) {
     .content {
         display: flex;
         gap: 30px;
@@ -1382,6 +1487,9 @@ th {
         font-size: 10px;
         padding: 6px 43px 5px 0px;
     }
+    .center-container {
+        margin-right: 30px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -1394,7 +1502,7 @@ th {
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 782px) {
     td {
         padding: 6px 20px 5px 0px;
     }
@@ -1468,39 +1576,49 @@ th {
     .earnings-container {
         width: 65%;
     }
+
     .search-box img {
         width: 100%;
     }
+
     .profile-container h1 {
         font-size: 14px;
     }
 }
-@media (max-width: 519px){
+
+@media (max-width: 610px) {
     .profile-box {
         gap: 17px;
     }
+
     .profile-container {
         width: 81%;
     }
+
     .report-box {
         width: auto;
         display: none;
     }
-}
-@media (max-width: 475px){
     .recent-trading-text h1 {
         font-size: 15px;
         line-height: 19px;
     }
+
     .exchange-box {
         width: 75%;
     }
-    .trade-container, .history-container, .transfer-container, .earnings-container {
+
+    .trade-container,
+    .history-container,
+    .transfer-container,
+    .earnings-container {
         width: 88%;
     }
+
     td {
         padding: 6px 5px 5px 0px;
     }
+
     .contant-body {
         width: 88%;
     }

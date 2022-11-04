@@ -21,8 +21,11 @@
         <div class="profile-container">
             <h1>Dashboard</h1>
             <div class="profile-box">
-                <a href="#" class="notice-chat"><img src="img/notice.svg" alt=""></a>
-                <a href="#" class="notice-chat"><img src="img/chat.svg" alt=""></a>
+                <div class="notice-chat-container">
+                    <a href="#" class="notice-chat"><img src="img/notice.svg" alt=""></a>
+                    <a href="#" class="notice-chat"><img src="img/chat.svg" alt=""></a>
+                </div>
+
                 <div class="dropdown">
                     <a href="#" class="profile-button">
                         <img src="img/profile-photo.jpg" alt="">
@@ -39,11 +42,12 @@
                                 <p>Wade Warren</p>
                             </div>
                         </a>
-                        <a href="#" class="profile-button">
-                            <img src="img/profile-photo.jpg" alt="">
+                        <a href="#" class="profile-button profile-button-exit">
+                            <span class="icon-exit">
+                                <ion-icon name="exit-outline"></ion-icon>
+                            </span>
                             <div>
-                                <h3>Wade Warren</h3>
-                                <p>Wade Warren</p>
+                                <p>Exit: "Wade Warren"</p>
                             </div>
                         </a>
                     </div>
@@ -205,7 +209,7 @@
                                 <p>Lorem ipsum is placeholder text commonly.</p>
                             </div>
                             <div class="time-recent-trading">
-                                <a href="#">Monthly</a>
+                                <a href="#" class="active">Monthly</a>
                                 <a href="#">Weekly</a>
                                 <a href="#">Today</a>
                             </div>
@@ -448,13 +452,11 @@
                                 </a>
                                 <div class="dropdown-content-chart">
                                     <a href="#" class="profile-button-chart">
-                                        <p><img src="img/exchange-btc.svg" alt=""> 55476.874 <img src="img/down.svg"
-                                                alt="">
+                                        <p><img src="img/exchange-btc.svg" alt=""> 55476.874 
                                         </p>
                                     </a>
                                     <a href="#" class="profile-button-chart">
-                                        <p><img src="img/exchange-btc.svg" alt=""> 55476.874 <img src="img/down.svg"
-                                                alt="">
+                                        <p><img src="img/exchange-btc.svg" alt=""> 55476.874 
                                         </p>
                                     </a>
                                 </div>
@@ -613,6 +615,8 @@
         </div>
     </div>
     <script src="/portfolio/coinfit/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
