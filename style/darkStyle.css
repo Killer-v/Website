@@ -134,7 +134,7 @@ header {
     background-color: rgb(255, 255, 255, 0.1);
     border-radius: 10px;
     position: relative;
-    height: 226px;
+    height: 261px;
     width: 362px;
 }
 
@@ -144,7 +144,6 @@ header {
     height: calc(100% - 4px);
     margin: 2px;
     position: relative;
-    z-index: 5;
 }
 
 .website img {
@@ -166,7 +165,7 @@ header {
     position: absolute;
     top: 0;
     right: 0%;
-    z-index: 5;
+    z-index: 7;
 }
 
 .website-text {
@@ -175,6 +174,7 @@ header {
     left: 6%;
     line-height: 10px;
     text-align: left;
+    z-index: 6;
 }
 
 .website p {
@@ -225,6 +225,19 @@ header {
     z-index: 1;
 }
 
+.website-background{
+    background: rgb(0 0 0 / 55%);
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    transition: opacity 800ms;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
 .my_works {
     width: 774px;
     display: flex;
@@ -265,62 +278,78 @@ footer {
         height: 100%;
     }
 }
-@media (max-width: 700px){
+
+@media (max-width: 700px) {
     .website {
         height: 196px;
         width: 279px;
     }
+
     .my_works {
         gap: 5px;
     }
+
     .website>.website-border {
         background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y),
                 rgb(255, 244, 244, 0.3),
                 transparent 40%);
     }
+
     .website:hover a {
         background: radial-gradient(300px circle at var(--mouse-x) var(--mouse-y),
-            rgba(255, 255, 255, 0.3),
-            transparent 40%);
+                rgba(255, 255, 255, 0.3),
+                transparent 40%);
     }
+
     .website h2 {
         font-size: 20px;
     }
+
     .website p {
         font-size: 13px;
     }
+
     .portfolio_container {
         margin-bottom: 32px;
     }
+
     footer {
         font-size: 13px;
     }
+
     .navigation a {
         font-size: 15px;
         padding: 18px 59px;
     }
+
     .navigation {
         padding: 24px 8px;
         margin-bottom: 53px;
     }
+
     .down_contact a {
         padding: 21px 28px;
         font-size: 15px;
     }
+
     .about-me h1 {
         font-size: 37px;
         line-height: 48px;
     }
+
     .about-me p {
         font-size: 19px;
         line-height: 25px;
     }
+
     .github {
         padding: 18px;
     }
+
     .linkedin {
         padding: 18px;
     }
+
     header {
         margin-bottom: 52px;
     }
@@ -389,31 +418,38 @@ footer {
     .header-box {
         margin-top: 34px;
     }
+
     .website {
         height: 254px;
         width: 399px;
     }
+
     #button_dark {
         padding: 18px;
         background-size: 21px;
     }
+
     .website>.website-border {
         background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
                 rgb(255, 244, 244, 0.3),
                 transparent 40%);
     }
 }
-@media (max-width: 450px){
+
+@media (max-width: 450px) {
     .website {
         height: 214px;
         width: 317px;
     }
+
     .navigation a:first-child {
         margin-right: 0px;
     }
+
     .navigation a {
         padding: 15px 35px;
     }
+
     .down_contact a {
         padding: 17px 14px;
     }

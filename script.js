@@ -33,7 +33,7 @@ document.getElementById("websites").onmousemove = e => {
         card.style.setProperty("--mouse-x", `${x}px`);
         card.style.setProperty("--mouse-y", `${y}px`);
     }
-    for (const card of document.querySelectorAll(".website")) {
+    for (const card of document.querySelectorAll("website")) {
             card.onmousemove = e => handleOnMouseMove(e);
 
             };
