@@ -218,6 +218,7 @@ h1>.magic>.magic-text {
 
 .navigation a:hover {
     background-color: #0C151D;
+    transition: color .25s;
 }
 
 .navigation a:first-child {
