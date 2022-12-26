@@ -1,0 +1,692 @@
+:root {
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes scale {
+
+    from,
+    to {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+body {
+    height: 100%;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #020508;
+    text-align: center;
+}
+
+.body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.my-img {
+    position: relative;
+    width: 308px;
+    height: 185px;
+    z-index: 1;
+}
+
+.my-img .foto-portfolio {
+    width: 200px;
+    height: auto;
+    left: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 26px;
+    background: rgb(123, 31, 162, 0.6);
+}
+
+.my-img .fon-photo {
+    position: absolute;
+    width: 721px;
+    top: -89px;
+    left: -113px;
+    z-index: -1;
+}
+
+header {
+    height: 100vh;
+    padding: 0 30px 0 30px;
+    background-color: #0C151D;
+    box-shadow: rgb(2 8 69 / 76%) 0px 0px 20px 10px;
+}
+
+.header-box {
+    margin-top: 65px;
+    margin-bottom: 65px;
+    text-align: end;
+    color: #F1F2F4;
+}
+
+.about-me h1 {
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 39px;
+}
+
+h1>.magic {
+    display: inline-block;
+    position: relative;
+}
+
+h1>.magic>.magic-star {
+    --size: clamp(20px, 1.5vw, 30px);
+    animation: scale 700ms ease forwards;
+    display: block;
+    height: var(--size);
+    left: var(--star-left);
+    position: absolute;
+    top: var(--star-top);
+    width: var(--size);
+}
+
+h1>.magic>.magic-star>svg {
+    animation: rotate 1000ms linear infinite;
+    display: block;
+    opacity: 0.7;
+}
+
+h1>.magic>.magic-star>svg>path {
+    fill: var(--violet);
+}
+
+h1>.magic>.magic-text {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(to right,
+            var(--purple),
+            var(--violet),
+            var(--pink),
+            var(--purple));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+.about-me p {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.social {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+}
+
+.github {
+    font-size: 0;
+    padding: 29px;
+    background-image: url(/img/dark_github.svg);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+}
+
+.linkedin {
+    font-size: 0;
+    padding: 29px;
+    background-image: url(/img/dark_linkedin.svg);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+}
+
+.down_contact a:first-child {
+    margin-right: 38px;
+    padding-right: 62px;
+    background-image: url(/img/download.svg);
+    background-repeat: no-repeat;
+    background-position: 88%;
+}
+
+.down_contact a {
+    text-decoration: none;
+    padding: 24px 42px;
+    border-radius: 10px;
+    background-color: #171F26;
+    font-size: 22px;
+    font-weight: 500;
+    color: #A3ABB2;
+}
+
+.down_contact a:hover {
+    background-color: #FBD144;
+    color: #3D3D3D;
+}
+
+.portfolio_container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0C151D;
+    box-shadow: rgb(2 8 69 / 76%) 0px 0px 20px 10px;
+    justify-content: center;
+    padding: 0 30px 0 30px;
+    z-index: 2;
+}
+
+.navigation {
+    background-color: #171F26;
+    border-radius: 20px;
+    padding: 31px 15px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #A3ABB2;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 18px 48px;
+}
+
+.navigation a:hover {
+    background-color: #0C151D;
+    transition: color .25s;
+}
+
+.navigation a:first-child {
+    margin-right: 15px;
+}
+
+.button-portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+}
+
+.website {
+    background-color: rgb(255, 255, 255, 0.1);
+    border-radius: 10px;
+    position: relative;
+    height: 261px;
+    width: 362px;
+}
+
+.website-contant {
+    border-radius: 10px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    margin: 2px;
+    position: relative;
+}
+
+.website img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 10px;
+    text-align: start;
+    object-fit: cover;
+}
+
+.website a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    right: 0%;
+    z-index: 7;
+}
+
+.website-text {
+    position: absolute;
+    top: 53%;
+    left: 6%;
+    line-height: 10px;
+    text-align: left;
+    z-index: 6;
+}
+
+.website p {
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 500;
+    color: rgb(158, 158, 158);
+}
+
+.website h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+}
+
+#websites:hover>.website>.website-border {
+    opacity: 1;
+}
+
+.website:hover::before {
+    opacity: 1;
+}
+
+.website::before,
+.website>.website-border {
+    display: block;
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 500ms;
+    top: 0;
+    width: 100%;
+}
+
+.website::before {
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+            rgb(255, 244, 244, 0.06),
+            transparent 40%);
+    z-index: 3;
+}
+
+.website>.website-border {
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+            rgb(255, 244, 244, 0.3),
+            transparent 40%);
+    z-index: 1;
+}
+
+.website-background {
+    background: rgb(0 0 0 / 55%);
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    transition: opacity 800ms;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.my_works {
+    width: 774px;
+    height: 542px;
+    overflow: auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+footer {
+    font-weight: 500;
+    font-size: 22px;
+    color: #A3ABB2;
+}
+
+.website:hover a {
+    display: block;
+    background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y),
+            rgba(255, 255, 255, 0.3),
+            transparent 40%);
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    transition: opacity 800ms;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(15, 17, 19, 1);
+}
+
+@media (max-width: 1730px) {
+    .my-img .fon-photo {
+        width: 791px;
+        top: -84px;
+    }
+
+    .my-img .foto-portfolio {
+        top: 83px;
+    }
+
+    .my-img {
+        height: 264px;
+    }
+}
+
+@media (max-width: 1580px) {
+    .my-img {
+        position: relative;
+        width: 308px;
+        height: 241px;
+        z-index: 1;
+    }
+
+    .my-img .fon-photo {
+        position: absolute;
+        width: 721px;
+        top: -89px;
+        left: -113px;
+        z-index: -1;
+    }
+
+}
+
+@media (max-width: 1500px) {
+    .website {
+        height: 249px;
+        width: 296px;
+    }
+
+    .website p {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .website h2 {
+        font-size: 22px;
+    }
+
+    .my_works {
+        width: 708px;
+        height: 542px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .my_works {
+        width: 613px;
+        height: 542px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .my-img {
+        height: 221px;
+    }
+
+    .my-img .foto-portfolio {
+        width: 171px;
+        top: 48px;
+    }
+
+    .my-img .fon-photo {
+        width: 665px;
+        top: -89px;
+        left: -113px;
+    }
+
+    .about-me h1 {
+        font-weight: 500;
+        font-size: 41px;
+        line-height: 39px;
+    }
+
+    .about-me p {
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 30px;
+    }
+
+    .down_contact a {
+        padding: 24px 42px;
+        font-size: 13px;
+    }
+
+    .down_contact a:first-child {
+        margin-right: 12px;
+        padding-right: 55px;
+    }
+
+    .navigation {
+        border-radius: 20px;
+        padding: 22px 15px;
+    }
+
+    .navigation a {
+        font-size: 11px;
+        padding: 15px 36px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .website {
+        height: 196px;
+        width: 258px;
+    }
+
+    .my_works {
+        width: 533px;
+        height: 542px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .website {
+        height: 236px;
+        width: 350px;
+    }
+
+    .my_works {
+        width: 407px;
+        height: 542px;
+    }
+}
+
+@media (max-width: 960px) {
+    .body {
+        display: flex;
+        flex-direction: column;
+        width: 64%;
+        align-items: center;
+        box-shadow: rgb(2 8 69 / 76%) 0px 0px 20px 10px;
+    }
+
+    body {
+        height: 100%;
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+        margin: 0;
+        background-color: #020508;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        width: -webkit-fill-available;
+        height: auto;
+        padding-bottom: 30px;
+        box-shadow: none;
+    }
+
+    .my-img .fon-photo {
+        width: 665px;
+        top: -89px;
+        left: -103px;
+    }
+
+    .my-img .foto-portfolio {
+        width: 202px;
+        top: 48px;
+    }
+
+    .about-me h1 {
+        font-weight: 500;
+        font-size: 45px;
+        line-height: 39px;
+    }
+
+    .about-me p {
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 30px;
+    }
+
+    .down_contact a {
+        padding: 24px 42px;
+        font-size: 18px;
+    }
+
+    .navigation a {
+        font-size: 16px;
+        padding: 15px 36px;
+    }
+
+    .portfolio_container {
+        width: -webkit-fill-available;
+        height: auto;
+        display: flex;
+        padding: 30px;
+        box-shadow: none;
+    }
+
+    .my_works {
+        width: 404px;
+        height: 493px;
+    }
+}
+
+@media (max-width: 754px) {
+    .body {
+        width: 79%;
+    }
+}
+
+@media (max-width: 680px) {
+    .my-img .fon-photo {
+        width: 646px;
+        top: -89px;
+        left: -90px;
+    }
+
+    .body {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 600px) {
+    .body {
+        width: 85%;
+    }
+}
+
+@media (max-width: 550px) {
+    .my-img .fon-photo {
+        width: 601px;
+        top: -80px;
+        left: -103px;
+    }
+
+    .my-img .foto-portfolio {
+        width: 156px;
+        top: 59px;
+    }
+
+    .about-me h1 {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 33px;
+    }
+
+    .my-img {
+        height: 215px;
+    }
+
+    .down_contact a {
+        padding: 20px 28px;
+        font-size: 13px;
+    }
+
+    .navigation a {
+        font-size: 13px;
+        padding: 11px 25px;
+    }
+
+    .navigation {
+        border-radius: 20px;
+        padding: 17px 12px;
+    }
+
+    .website {
+        height: 201px;
+        width: 299px;
+    }
+
+    .my_works {
+        width: 343px;
+        height: 493px;
+    }
+}
+
+@media (max-width: 450px) {
+    .down_contact a:first-child {
+        margin-right: 6px;
+        padding-right: 38px;
+    }
+
+    .navigation {
+        border-radius: 20px;
+        padding: 14px 9px;
+    }
+
+    .navigation a:first-child {
+        margin-right: 2px;
+    }
+}
+
+@media (max-width: 410px) {
+    .down_contact {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
