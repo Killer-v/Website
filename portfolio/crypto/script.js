@@ -114,8 +114,29 @@ function moveFirstElementToEnd2() {
     carousel3.style.left = -elementWidth3 + "px";
 
     carousel3.append(firstElement3);
-}
+}   
 
+ const settingsButton = document.querySelector('.settingsButton'),
+   darkButtonBox = document.querySelector('.darkButtonBox'),
+   darkButton = document.querySelector('.darkButton');
 
+ settingsButton.addEventListener("click", () => darkButtonBox.classList.toggle("active"));
+ darkButton.addEventListener("click", () => darkButton.classList.toggle("darkButtonActive"));
 
+//  let switchMode = document.getElementById("darkButton");
 
+darkButton.onclick = function () {
+     let theme = document.getElementById("theme");
+    if (theme.getAttribute("href") == "style/style.css") {
+         theme.href = "style/darkStyle.css";
+     } else {
+         theme.href = "style/style.css";
+     }
+ }
+
+ const chatBox = document.querySelector('.chatBox'),
+ openChatBox = document.querySelector('.openChatBox'),
+ closeChat = document.querySelector('.closeChat');
+
+ openChatBox.addEventListener("click", () => chatBox.classList.toggle("activeChat"));
+ closeChat.addEventListener("click", () => chatBox.classList.toggle("activeChat"));

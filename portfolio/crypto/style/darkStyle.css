@@ -2,40 +2,18 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #F2F2F2;
+    background: rgba(48, 48, 48, 1);
     position: relative;
 }
 
-/* .fon-body {
-    position: absolute;
-    z-index: -1;
-    top: -23%;
-    width: 100%;
-    overflow: hidden;
-} */
-
-/* .fon-body img {
-    width: 1913.12px;
-    height: 1908.51px;
-    margin-left: -180px;
-} */
 .header {
     position: relative;
     overflow: hidden;
-    background-image: url(/portfolio/crypto/img/body-fon2.png);
+    background-image: url(/portfolio/crypto/img/darkBody-fon.svg);
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-.box-fon-body {
-    width: 100%;
-    height: auto;
-}
-
-.settings a ion-icon {
-    font-size: 30px;
-    color: rgba(0, 0, 0, 0.54);
-}
 
 header {
     margin-bottom: 103px;
@@ -44,7 +22,7 @@ header {
 .course-crypto-container {
     display: flex;
     justify-content: space-around;
-    background-color: #fff;
+    background: #424242;
 }
 
 .course-crypto {
@@ -54,6 +32,7 @@ header {
 }
 
 .course-crypto p {
+    color: rgba(255, 255, 255, 1);
     font-weight: 500;
     font-size: 14px;
 }
@@ -67,7 +46,7 @@ header {
     border-bottom: 8px solid #5DD662;
 }
 
-.grin {
+.course-crypto .grin {
     color: #5DD662;
 }
 
@@ -79,7 +58,7 @@ header {
     border-top: 8px solid #FF7272;
 }
 
-.red {
+.course-crypto .red {
     color: #FF7272;
 }
 
@@ -105,7 +84,7 @@ header {
 .logo h1 {
     font-weight: 600;
     font-size: 36px;
-    color: rgba(48, 47, 47, 1);
+    color: #fff;
 }
 
 .menu {
@@ -115,13 +94,13 @@ header {
 
 .menu a {
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.87);
+    color: #fff;
     font-weight: 600;
     font-size: 18px;
 }
 
 .menu a:hover {
-    color: rgba(156, 39, 176, 1);
+    color: rgba(225, 190, 231, 1);
 }
 
 .login-container {
@@ -140,7 +119,7 @@ header {
     text-decoration: none;
     font-weight: 700;
     font-size: 16px;
-    color: rgba(48, 47, 47, 1);
+    color: #fff;
 }
 
 .register-text {
@@ -149,17 +128,13 @@ header {
     font-size: 16px;
     color: rgba(255, 255, 255, 1);
     padding: 12px 21px;
-    background-color: rgba(255, 160, 0, 1);
+    background-color: #FFA000;
 }
 
 .settings {
     position: relative;
     padding: 0 0 0 31px;
     border-left: 1px solid rgba(151, 151, 151, 1);
-}
-
-.settings a {
-    font-size: 0;
 }
 
 .darkButtonBox {
@@ -169,7 +144,7 @@ header {
     border-radius: 30px;
     width: 200px;
     height: auto;
-    border: 1px solid rgba(156, 39, 176, 1);
+    border: 1px solid rgba(225, 190, 231, 1);
     opacity: 0;
     z-index: -300;
     display: flex;
@@ -182,6 +157,7 @@ header {
 }
 
 .darkButtonBox p {
+    color: #fff;
     margin: 0;
     padding: 15px;
     font-weight: 500;
@@ -191,7 +167,7 @@ header {
     position: relative;
     width: 50px;
     height: 25px;
-    border: 2px solid #6A1B9A;
+    border: 2px solid rgba(225, 190, 231, 1);
     border-radius: 50px;
     cursor: pointer;
 }
@@ -201,7 +177,7 @@ header {
     position: absolute;
     width: 23px;
     height: 23px;
-    background-color: #6A1B9A;
+    background-color: rgba(225, 190, 231, 1);
     border-radius: 100%;
     top: 50%;
     transform: translateY(-50%);
@@ -210,6 +186,16 @@ header {
 
 .darkButton.darkButtonActive::before {
     left: calc(100% - 23px);
+}
+
+.dark .settings-login a ion-icon {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.54);
+}
+
+.settings a ion-icon {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.54);
 }
 
 .subtitle {
@@ -224,14 +210,14 @@ header {
     font-weight: 600;
     font-size: 36px;
     line-height: 54px;
-    color: rgba(0, 0, 0, 0.87);
+    color: #fff;
 }
 
 .subtitle .text h2 {
     font-weight: 500;
     font-size: 24px;
     line-height: 33px;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(225, 225, 225, 0.87);
 }
 
 .subtitle .button-started {
@@ -243,11 +229,11 @@ header {
 .subtitle .button-started a {
     text-decoration: none;
     padding: 15px 31px;
-    color: rgba(106, 27, 154, 1);
+    color: rgba(225, 190, 231, 1);
     font-weight: 600;
     font-size: 16px;
     border-radius: 6px;
-    border: 1px solid rgba(156, 39, 176, 1);
+    border: 1px solid rgba(225, 190, 231, 1)
 }
 
 .subtitle .button-started .colors {
@@ -270,7 +256,7 @@ header {
 
 .pros a {
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(225, 225, 225, 0.87);
 }
 
 .pros a h2 {
@@ -289,7 +275,7 @@ header {
 }
 
 .pros a:hover p {
-    color: rgba(156, 39, 176, 1);
+    color: rgba(225, 190, 231, 1);
 }
 
 .group-1 {
@@ -327,14 +313,14 @@ header {
     font-weight: 600;
     font-size: 32px;
     line-height: 48px;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 0.87);
 }
 
 .protection-text p {
     font-weight: 500;
     font-size: 24px;
     line-height: 36px;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 0.87);
 }
 
 .protection1 .protection-text h2 .hexagon img {
@@ -364,7 +350,7 @@ header {
 }
 
 .hexagon {
-    background: linear-gradient(190.4deg, #E1BEE7 23.61%, #FFECB3 107.05%);
+    background: linear-gradient(190.4deg, #9C27B0 23.61%, #FFA000 107.05%);
     transform: rotate(-90deg);
     position: relative;
     width: 55px;
@@ -388,7 +374,7 @@ header {
     position: relative;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    background: linear-gradient(190.4deg, rgba(225, 190, 231, 0.3) 23.61%, rgba(255, 236, 179, 0.3) 107.05%);
+    background: linear-gradient(190.4deg, rgb(106, 27, 154, 0.3) 23.61%, rgb(255, 111, 0, 0.3) 107.05%);
 }
 
 .hexagon-box {
@@ -419,7 +405,7 @@ header {
     height: 300px;
     left: 7%;
     top: 33%;
-    background: #FFFFFF;
+    background: rgba(0, 0, 0, 0.12);
     opacity: 0.4;
     transform: rotate(29deg);
 }
@@ -430,7 +416,7 @@ header {
     height: 260px;
     left: 30%;
     top: 24px;
-    background: #FFFFFF;
+    background: rgba(0, 0, 0, 0.12);
     mix-blend-mode: normal;
     opacity: 0.4;
     transform: rotate(30deg);
@@ -447,7 +433,7 @@ header {
 }
 
 .hexagon-text-carousel1 {
-    background: linear-gradient(190.4deg, #E1BEE7 23.61%, #FFECB3 107.05%);
+    background: linear-gradient(190.4deg, #9C27B0 23.61%, #FFA000 107.05%);
     width: 50px;
     height: 50px;
     margin-left: 49%;
@@ -462,14 +448,14 @@ header {
     font-weight: 600;
     font-size: 32px;
     line-height: 48px;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 0.87);
 }
 
 .contant-text-carousel1 p {
     font-weight: 500;
     font-size: 24px;
     line-height: 33px;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 0.87);
 }
 
 .swiper {
@@ -502,13 +488,13 @@ header {
 .contant-text-carousel2 h1 {
     font-weight: 600;
     font-size: 32px;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 0.87);
 }
 
 .contant-text-carousel2 p {
     font-weight: 500;
     font-size: 24px;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 0.87);
 }
 
 .container-carousel2 {
@@ -537,7 +523,7 @@ header {
 }
 
 .card {
-    background-color: #fff;
+    background: rgba(66, 66, 66, 1);
     border-radius: 30px;
     padding: 25px;
     width: 300px;
@@ -563,7 +549,31 @@ header {
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.text-top p {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.text-top ion-icon {
+    color: #fff;
+}
+
+.percent-cart-box {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.percent-cart-box .grin {
+    color: rgba(93, 214, 98, 1);
+}
+
+.percent-cart-box .red {
+    color: rgba(255, 114, 114, 1);
+}
+
+.amount-box p:nth-child(2) {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .name-card p {
@@ -574,7 +584,7 @@ header {
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 0.87);
 }
 
 .text2-card {
@@ -601,11 +611,13 @@ header {
 .card .price {
     font-size: 30px;
     font-weight: 600;
+    color: rgba(255, 255, 255, 0.87);
 }
 
 .amount-box p:nth-child(1) {
     margin: 0;
     font-weight: 600;
+    color: rgba(255, 255, 255, 0.87);
 }
 
 .button-carousel2 .button-left-box {
@@ -669,7 +681,7 @@ header {
 }
 
 .button-carousel3 .button-left {
-    background-color: #6A1B9A;
+    background: #E1BEE7;
     width: 20px;
     height: 20px;
     clip-path: polygon(75% 0, 25% 50%, 75% 100%, 50% 100%, 0% 50%, 50% 0);
@@ -685,7 +697,7 @@ header {
 }
 
 .button-carousel3 .button-right {
-    background-color: #6A1B9A;
+    background: #E1BEE7;
     width: 20px;
     height: 20px;
     clip-path: polygon(55% 0, 100% 50%, 55% 100%, 25% 100%, 75% 50%, 25% 0);
@@ -700,7 +712,8 @@ header {
     width: 20px;
     height: 20px;
     border-radius: 20px;
-    background-color: #E1BEE7;
+    background: #6A1B9A;
+    box-shadow: 0px 0px 49px -2px rgba(0, 0, 0, 0.19);
     padding: 15px;
 }
 
@@ -712,7 +725,8 @@ header {
     width: 20px;
     height: 20px;
     border-radius: 20px;
-    background-color: #E1BEE7;
+    background: #6A1B9A;
+    box-shadow: 0px 0px 49px -2px rgba(0, 0, 0, 0.19);
     padding: 15px;
 }
 
@@ -723,11 +737,13 @@ header {
     width: 850px;
     height: 200px;
     text-align: center;
-    border: 2px solid rgba(225, 190, 231, 1);
-    background-color: #fff;
+    background: #424242;
+    border: 2px solid #6A1B9A;
+    box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
 }
 
 .cart3 p {
+    color: rgba(255, 255, 255, 1);
     margin-top: 50px;
     font-weight: 400;
     font-size: 18px;
@@ -753,26 +769,27 @@ header {
 
 .container-carousel3 .fon1 {
     position: absolute;
-    background: #FFFFFF;
     border-radius: 20px;
     width: 81%;
     height: 300px;
     top: 21%;
     left: 10%;
     z-index: 2;
+    background: #424242;
     box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
 }
 
 .container-carousel3 .fon2 {
     position: absolute;
-    background: #FFFFFF;
     border-radius: 20px;
     width: 66%;
     height: 300px;
     top: 29%;
     left: 17%;
     z-index: 1;
+    background: #424242;
     box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
+
 }
 
 .carousel3 {
@@ -828,20 +845,20 @@ header {
 .carousel4-text h2 {
     font-weight: 600;
     font-size: 16px;
-    color: rgba(0, 0, 0, 0.54);
+    color: rgba(255, 255, 255, 0.54);
 }
 
 .carousel4-text p {
     font-weight: 400;
     font-size: 16px;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 1);
 }
 
 .carousel4-text a {
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
-    color: rgba(156, 39, 176, 1);
+    color: rgba(225, 190, 231, 1);
 }
 
 .container-carousel4 .swiper-horizontal>.swiper-pagination-bullets,
@@ -857,15 +874,15 @@ header {
     width: 30px;
     height: 15px;
     border-radius: 10px;
-    background: linear-gradient(210.9deg, #9C27B0 7.91%, #FFA000 101.94%);
+    background: linear-gradient(209.09deg, #E1BEE7 9.22%, #FFECB3 102.34%);
 }
 
 .container-carousel4 .swiper-pagination-bullet {
     height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 15px));
     display: inline-block;
     border-radius: 10px;
-    background: var(--swiper-pagination-bullet-inactive-color, #F2F2F2);
-    border: 1px solid rgba(156, 39, 176, 1);
+    background: rgba(48, 48, 48, 1);
+    border: 1px solid rgba(225, 190, 231, 1);
     opacity: var(--swiper-pagination-bullet-inactive-opacity, 1.2);
 }
 
@@ -873,9 +890,8 @@ footer {
     margin-top: 100px;
     position: relative;
     overflow: hidden;
-    background-image: url(/portfolio/crypto/img/footer-fon.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-image: url(/portfolio/crypto/img/footer-fon-dark.svg);
+    background-size: inherit;
     background-position-y: bottom;
 }
 
@@ -890,19 +906,17 @@ footer {
 .user-counting h1 {
     font-weight: 700;
     font-size: 48px;
-    color: #6A1B9A;
-    ;
+    color: rgba(225, 190, 231, 1);
 }
 
 .user-counting p {
     font-weight: 500;
     font-size: 24px;
-    color: #6A1B9A;
-    ;
+    color: rgba(225, 190, 231, 1);
 }
 
 .box-start h2 {
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 1);
     font-weight: 700;
     font-size: 32px;
 }
@@ -937,7 +951,6 @@ footer {
 .footer-logo p:last-child {
     font-weight: 400;
     font-size: 16px;
-    color: rgba(0, 0, 0, 0.87);
 }
 
 .company {
@@ -949,14 +962,14 @@ footer {
 .company h1 {
     font-weight: 700;
     font-size: 18px;
-    color: rgba(156, 39, 176, 1);
+    color: rgba(225, 190, 231, 1);
 }
 
 .company a {
     text-decoration: none;
     font-weight: 400;
     font-size: 16px;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 1);
 }
 
 .company a:hover {
@@ -978,17 +991,17 @@ footer {
     height: 25px;
     font-size: 25px;
     text-decoration: none;
-    color: rgba(156, 39, 176, 1);
+    color: #E1BEE7;
     padding: 10px;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 0.08);
+    background: #424242;
 }
 
 .language {
     margin-top: 30px;
     padding: 10px 10px 10px 40px;
     border: 1px solid rgba(106, 27, 154, 1);
-    background-image: url(/portfolio/crypto/img/language-img.svg);
+    background-image: url(/portfolio/crypto/img/language-img-dark.svg);
     background-repeat: no-repeat;
     background-position-y: 10px;
     background-position-x: 10px;
@@ -999,7 +1012,7 @@ footer {
     text-decoration: none;
     font-weight: 500;
     font-size: 18px;
-    color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
 }
 
 .language-box {
@@ -1023,27 +1036,31 @@ footer {
     height: auto;
 }
 
-.fon-footer {
-    position: absolute;
-    top: -42%;
-    left: -5%;
-    width: 2526.4px;
-    height: 100%;
-    height: 2426.43px;
-    background-image: url(/portfolio/crypto/img/body-fon.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    transform: rotate(193deg);
-    z-index: -1;
+.footer-logo p {
+    color: rgba(255, 255, 255, 1);
 }
 
 /* STYLE FOR LOGIN FORM */
+.login-container-body .header {
+    background-image: none;
+}
+
+.container-fon {
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+    background-image: url(/portfolio/crypto/img/footer-fon-dark.svg);
+    background-size: inherit;
+    background-position-y: bottom;
+}
 
 .container-fon {
     width: 100%;
     height: auto;
-    overflow: hidden;
-    position: absolute;
+}
+
+.container-fon footer {
+    background-image: none;
 }
 
 .box-fon-footer-login .fon-footer {
@@ -1065,7 +1082,7 @@ footer {
 .register a {
     padding: 0 30px;
     text-decoration: none;
-    color: #302F2F;
+    color: rgba(255, 255, 255, 1);
     font-weight: 500;
     font-size: 16px;
     border-right: 1px solid rgba(151, 151, 151, 1)
@@ -1093,19 +1110,19 @@ footer {
 }
 
 .form-right-text h1 {
-    color: rgba(106, 27, 154, 1);
+    color: rgba(225, 190, 231, 1);
     font-weight: 400;
     font-size: 42px;
 }
 
 .form-right-text p {
-    color: rgba(0, 0, 0, 0.54);
+    color: rgba(255, 255, 255, 1);
     font-weight: 500;
     font-size: 24px;
 }
 
 .body-login .login-container {
-    background-color: #fff;
+    background-color: rgba(66, 66, 66, 1);
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -1122,7 +1139,7 @@ footer {
 }
 
 .social-container-login h2 {
-    color: rgba(106, 27, 154, 1);
+    color: rgba(225, 190, 231, 1);
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
@@ -1168,7 +1185,7 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 25px;
-    color: rgba(0, 0, 0, 0.54);
+    color: rgba(255, 255, 255, 0.54);
     font-weight: 400;
     font-size: 16px;
 }
@@ -1177,14 +1194,14 @@ footer {
     content: "";
     width: 56px;
     height: 1px;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .social-container-login p::after {
     content: "";
     width: 56px;
     height: 1px;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .login-form-box {
@@ -1201,13 +1218,13 @@ footer {
     position: relative;
     width: 100%;
     padding: 20px 15px 15px 15px;
-    background: rgba(0, 0, 0, 0.09);
+    background: rgba(255, 255, 255, 0.1);
     border: none;
     outline: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.38);
+    border-bottom: rgba(255, 255, 255, 0.12);
     font-size: 14px;
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.56);
+    color: rgba(255, 255, 255, 0.56);
 
 }
 
@@ -1218,7 +1235,7 @@ footer {
     pointer-events: none;
     font-size: 16px;
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.42);
+    color: rgba(255, 255, 255, 0.54);
     letter-spacing: 0.05em;
     transition: 0.5s;
 }
@@ -1257,7 +1274,7 @@ footer {
     height: 15px;
     background: rgba(255, 160, 0, 1);
     border-radius: 3px;
-    border: 1px solid #F2F2F2;
+    border: 1px solid rgba(255, 160, 0, 1);
     position: relative;
 }
 
@@ -1271,7 +1288,7 @@ footer {
     display: block;
     width: 11px;
     height: 11px;
-    background-color: #fff;
+    background-color: rgba(66, 66, 66, 1);
     opacity: 1;
     transition: .2s;
 }
@@ -1285,9 +1302,13 @@ footer {
     opacity: 0;
 }
 
+.checkbox-text {
+    color: rgba(255, 255, 255, 1);
+}
+
 .fogot-password a {
     text-decoration: none;
-    color: rgba(156, 39, 176, 1);
+    color: rgba(225, 190, 231, 1);
     font-weight: 400;
     font-size: 18px;
 }
@@ -1332,6 +1353,11 @@ footer {
     align-items: center;
 }
 
+.checkbox-text a {
+    text-decoration: none;
+    color: rgba(225, 190, 231, 1);
+}
+
 /* STYLE FOR CONTACT FORM */
 .body-contact {
     text-align: center;
@@ -1350,15 +1376,15 @@ footer {
 
 .request_input textarea {
     padding: 10px;
-    background: rgba(0, 0, 0, 0.09);
+    background: rgba(255, 255, 255, 0.1);
     width: 98%;
     border: none;
     outline: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.38);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.54);
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.42);
+    color: rgba(255, 255, 255, 1);
 }
 
 .request_input {
@@ -1372,17 +1398,16 @@ footer {
 }
 
 .social-container-contact h2 {
-    color: rgba(106, 27, 154, 1);
+    color: rgba(225, 190, 231, 1);
     font-size: 48px;
     font-weight: 700;
 }
 
 .social-container-contact p {
-    color: rgba(0, 0, 0, 0.54);
+    color: rgba(255, 255, 255, 1);
     font-size: 24px;
     font-weight: 500;
 }
-
 /* STYLE CHAT */
 
 .chatContainer {
@@ -1391,12 +1416,13 @@ footer {
     position: fixed;
     bottom: -21%;
     left: 80%;
+    z-index: 400;
 }
 
 .chatBox {
-    background-color: #fff;
+    background-color: rgba(66, 66, 66, 1);
     opacity: 1;
-    z-index: 300;
+    z-index: 30000000;
 
 }
 
@@ -1407,7 +1433,7 @@ footer {
 }
 
 .nameChat {
-    background: #E1BEE7;
+    background: rgba(106, 27, 154, 1);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1423,7 +1449,7 @@ footer {
 .onlineBox p {
     font-weight: 700;
     font-size: 16px;
-    color: rgba(106, 27, 154, 1);
+    color: rgba(225, 190, 231, 1);
 }
 
 .online {
@@ -1484,7 +1510,7 @@ footer {
 
 .sendButton {
     padding: 8px 5px 5px 8px;
-    background: #E1BEE7;
+    background: rgba(225, 190, 231, 1);
     border-radius: 100%;
 }
 
@@ -1492,8 +1518,8 @@ footer {
     width: 80%;
     padding: 5px;
     border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.38);
-    background: rgba(0, 0, 0, 0.09);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .openChat {
@@ -1507,7 +1533,7 @@ footer {
     height: 33px;
     padding: 10px;
     border-radius: 100%;
-    background: #E1BEE7;
+    background: rgba(225, 190, 231, 1);
     box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
 }
 
@@ -1515,7 +1541,6 @@ footer {
     width: 30px;
     height: 30px;
 }
-
 @media (max-width: 1540px) {
     .chatContainer {
         left: 75%;
@@ -1524,10 +1549,6 @@ footer {
 
 @media (max-width: 1450px) {
     .header {
-        background-size: unset;
-    }
-
-    footer {
         background-size: unset;
     }
 }
@@ -1553,7 +1574,6 @@ footer {
         width: 50%;
     }
 }
-
 @media (max-width: 1220px) {
     .chatContainer {
         left: 71%;
@@ -1657,7 +1677,6 @@ footer {
         display: flex;
         justify-content: normal;
         gap: 20px;
-        background-color: #fff;
     }
 
     .course-crypto-container::-webkit-scrollbar {
@@ -1690,7 +1709,6 @@ footer {
         flex-wrap: wrap;
     }
 }
-
 @media (max-width: 1030px) {
     .chatContainer {
         left: 67%;
@@ -1698,8 +1716,12 @@ footer {
 }
 
 @media (max-width: 1110px) {
+    .darkButtonBox {
+        bottom: -6px;
+        left: 90px;
+    }
+
     .menu-container {
-        margin: 0 112px;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -1801,23 +1823,7 @@ footer {
         border-radius: 10px;
     }
 
-    .container-carousel3 .fon2 {
-        width: 71%;
-        height: 206px;
-        top: 44%;
-        left: 15%;
-        z-index: 1;
-    }
-
-    .container-carousel3 .fon1 {
-        width: 85%;
-        height: 213px;
-        top: 37%;
-        left: 8%;
-    }
-
 }
-
 @media (max-width: 920px) {
     .chatContainer {
         left: 60%;
@@ -1825,6 +1831,9 @@ footer {
 }
 
 @media (max-width: 900px) {
+    .container-fon {
+        background-size: cover;
+    }
 
     .protection:nth-last-of-type(3) {
         display: flex;
@@ -1882,15 +1891,12 @@ footer {
     }
 
     .container-carousel3 {
-        height: 434px;
-    }
-
-    .carousel3 {
-        margin-bottom: 90px;
+        height: 323px;
     }
 
     .container-carousel2 {
         margin-top: 0px;
+        padding-bottom: 100px;
     }
 
     .button-right-carousel3 {
@@ -1933,11 +1939,6 @@ footer {
 }
 
 @media (max-width: 850px) {
-    .protection3 img {
-        width: 100%;
-        height: auto;
-    }
-
     .swiper {
         width: 500px;
         height: auto;
@@ -1963,15 +1964,14 @@ footer {
 
 }
 
-@media (max-width: 760px) {
-    .chatContainer {
-        left: 57%;
-    }
-}
-
-@media (max-width: 750px) {
+@media (max-width: 775px) {
     .carousel2 {
         left: -237px;
+    }
+
+    .protection3 img {
+        width: 100%;
+        height: auto;
     }
 
     .pros-container {
@@ -2003,6 +2003,11 @@ footer {
 
     .swiper2 {
         margin-left: 256%;
+    }
+}
+@media (max-width: 760px) {
+    .chatContainer {
+        left: 57%;
     }
 }
 
@@ -2067,10 +2072,16 @@ footer {
         left: 54%;
     }
 }
+
 @media (max-width: 680px) {
     .chatContainer {
         left: 45%;
     }
+    .darkButtonBox {
+        bottom: -65px;
+        left: -122px;
+    }
+    
     .subtitle .text h1 {
         font-size: 28px;
         line-height: 42px;
@@ -2108,20 +2119,6 @@ footer {
         height: 262px;
     }
 
-    .container-carousel3 .fon1 {
-        width: 78%;
-        height: 121px;
-        top: 37%;
-        left: 12%;
-    }
-
-    .container-carousel3 .fon2 {
-        width: 67%;
-        height: 105px;
-        top: 44%;
-        left: 18%;
-    }
-
     .footer {
         display: grid;
         margin: 50px 50px;
@@ -2150,6 +2147,15 @@ footer {
 
     .container-carousel3 {
         width: 337px;
+        margin: 0;
+    }
+
+    .container-carousel3 .fon1 {
+        height: 179px;
+    }
+
+    .container-carousel3 .fon2 {
+        height: 168px;
     }
 
 }
@@ -2183,17 +2189,6 @@ footer {
     .contant-text-carousel1 {
         margin-bottom: 0px;
         z-index: 2;
-    }
-
-    .fon-footer {
-        top: 3%;
-        left: -141%;
-    }
-
-    .fon-body {
-        top: -10%;
-        left: -12%;
-        width: 167%;
     }
 
     .protection img {
@@ -2257,10 +2252,6 @@ footer {
         text-align: center;
     }
 
-    footer {
-        margin-top: 0px;
-    }
-
     .text-subtitle .text {
         margin-bottom: 50px;
     }
@@ -2274,7 +2265,6 @@ footer {
 
 @media (max-width: 610px) {
     .card {
-        background-color: #fff;
         border-radius: 30px;
         padding: 15px;
         width: 267px;
@@ -2392,6 +2382,16 @@ footer {
 }
 
 @media (max-width: 465px) {
+    .button-right-carousel3 {
+        top: 155%;
+        left: 85%;
+    }
+
+    .button-left-carousel3 {
+        top: 155%;
+        left: 4%;
+    }
+
     .menu-container-login {
         margin: 0 30px;
         display: flex;
