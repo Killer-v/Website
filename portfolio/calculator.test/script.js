@@ -1,72 +1,65 @@
-let a = '';
-let b = '';
-let sign = '';
-let finish = false;
+const model = [
+    {type: 'text', value: '0' },
 
-const digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
-const action = ['-', '+', 'X', '/'];
-
-const out = document.querySelector('.conclusion p')
-
-function clearAll (){
-    a = '';
-    b = '';
-    sign = '';
-    finish = false;
-    out.textContent = 0;
-}
-
-document.querySelector('.ac').onclick = clearAll;
-
-document.querySelector('.button-box').onclick = (event) => {
-    if(!event.target.classList.contains('btn')) return;
-    if(event.target.classList.contains('ac')) return;
-
-    out.textContent = '';
-
-    const key = event.target.textContent;
-
-    if(digit.includes(key)) {
-        if(b == '' && sign === ''){
-            a += key;
-            out.textContent = a;
-        }
-        else if(a!=='' && b!== '' && finish){
-            b = key;
-            finish = false;
-            out.textContent = b;
-        }
-        else{
-            b += key;
-            out.textContent = b;
-        }
-        return;
+    {
+        type: 'buttonBox', value: btn = [
+            { type: 'button', class: 'bg-grey', value: 'as' },
+            { type: 'button', class: 'bg-grey', value: '+/-' },
+            { type: 'button', class: 'bg-grey', value: '%' },
+            { type: 'button', class: 'bg-orange', value: '/' },
+            { type: 'button', class: '', value: '7' },
+            { type: 'button', class: '', value: '8' },
+            { type: 'button', class: '', value: '9' },
+            { type: 'button', class: 'bg-orange', value: 'X' },
+            { type: 'button', class: '', value: '4' },
+            { type: 'button', class: '', value: '5' },
+            { type: 'button', class: 'bg-orange', value: '-' },
+            { type: 'button', class: '', value: '1' },
+            { type: 'button', class: '', value: '2' },
+            { type: 'button', class: '', value: '3' },
+            { type: 'button', class: 'bg-orange', value: '+' },
+            { type: 'button', class: '', value: '0' },
+            { type: 'button', class: '', value: '.' },
+            { type: 'button', class: 'bg-orange', value: '=' }
+        ]
     }
+]
 
-    if (action.includes(key)){
-        sign = key;
-        out.textContent = sign;
-        return;
+const calculator = document.querySelector('#calculator-box')
+
+model.forEach(block => {
+    let html = ''
+
+    if (block.type === 'text') {
+        html = `
+           <div class="conclusion"> 
+               <input type="text" value="${block.value}">
+           </div>
+        `
+    } else if (block.type === 'buttonBox') {
+        html = `
+           <div id="buttonBox" class="button-box"></div>
+        `
     }
     
-    if(key === '=') {
-        if(b === '') b = a;
-        switch (sign){
-            case "+":
-                a = (+a) + (+b);
-                break
-            case "-":
-                a = (+a) - (+b);
-                break
-            case "X":
-                a = (+a) * (+b);
-                break  
-            case "/":
-                a = (+a) / (+b);
-                break     
-        }
-        finish = true;
-        out.textContent = a;
-        console.log(a, b, sign);
-    }
-}
+    calculator.insertAdjacentHTML('beforeend', html);
+});
+
+const buttonBox = document.querySelector('#buttonBox')
+
+btn.forEach(block => {
+    let html = ''
+
+    if (block.type === 'button') {
+        html = `
+           <div id="btn" class="btn">${block.value}</div>
+        `    
+    };
+
+    // let btn = document.querySelector('#btn')
+    // if (block.class === 'bg-grey'){
+    //     btn.className = 'bg-grey';
+    // }
+
+    buttonBox.insertAdjacentHTML('beforeend', html);
+})

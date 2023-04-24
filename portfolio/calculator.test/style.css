@@ -20,7 +20,7 @@ body .calculator-box{
     width: 95%;
     height: 18%;
 }
-.conclusion p{
+.conclusion input{
     text-align: end;
     font-size: 40px;
 }
