@@ -21,6 +21,10 @@ body .calculator-box{
     height: 18%;
 }
 .conclusion input{
+    color: azure;
+    background-color: #1d1d20;
+    border: none;
+    width: 100%;
     text-align: end;
     font-size: 40px;
 }
