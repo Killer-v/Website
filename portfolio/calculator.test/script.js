@@ -84,8 +84,8 @@ buttonBox.onclick = (event) => {
     if (event.target.classList.contains('as')) return;
     out.value = '0';
 
-    out.value = '0';
     const key = event.target.textContent;
+
     if (digit.includes(key)) {
         if (b == '' && sign === '') {
             a += key;
@@ -108,6 +108,23 @@ buttonBox.onclick = (event) => {
         return;
     }
 
+    if (digit.includes(key)) {
+        if (b == '' && sign === '') {
+            a += key;
+            out.value = a;
+        }
+        else if (a !== '' && b !== '' && finish) {
+            b = key;
+            finish = false;
+            out.value = b;
+        }
+        else {
+            b += key;
+            out.value = b;
+        }
+        return;
+    }
+
     if (key === '=') {
         if (b === '') b = a;
         switch (sign) {
@@ -123,23 +140,26 @@ buttonBox.onclick = (event) => {
             case "/":
                 a = (+a) / (+b);
                 break
-            // case "%":
-            //     a = ((+a) / 100) * b;
-            //     break        
         }
         finish = true;
         out.value = a;
-        console.log(a, b, sign);
     }
-    (function () {
-        out.addEventListener('keydown', function (e) {
-            if (e.keyCode === 13) {
-                key === '=';
-            }
-        });
-    })();
-    
+
+
+
+
+    // (function () {
+    //         out.addEventListener('keydown', function (e) {
+    //             if (e.keyCode === 13) {
+    //                 e.keyCode = '=';
+    //             }
+    //         });
+    //     })();
+
+
+
 };
+
 
 out.onclick = function () { out.value = '' };
 out.addEventListener("change", inputChange);
@@ -147,17 +167,39 @@ out.addEventListener("change", inputChange);
 function inputChange() {
     if (a == '' && b == '') {
         a = out.value
-    } else if (a !== '' && b == '' && sign !== '') {
+    } else if (a !== '' && sign !== '' && b == '') {
         b = out.value
     } else if (a !== '' && b !== '' && sign !== '') {
-        cle
+
     }
+
+    console.log(a, b)
 };
 
+(function () {
+    out.addEventListener('keydown', function (e) {
+        if (e.keyCode === 13) {
+            // if (b === '') {b = a};
+            switch (sign) {
+                case "+":
+                    a = (+a) + (+b);
+                    break
+                case "-":
+                    a = a - b;
+                    break
+                case "X":
+                    a = a * b;
+                    break
+                case "/":
+                    a = a / b;
+                    break
+            }
+            // finish = true;
+            out.value = a;
+        }
+
+        console.log(a, b, sign)
+    });
+})();
 
 
-// let clearOut = () => ;
-
-
-
-console.log(a)
