@@ -70,7 +70,6 @@ let finish = false;
 const digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 const action = ['-', '+', 'X', '/', '%'];
 
-
 as.onclick = function clearAll() {
     out.value = '0';
     a = '';
@@ -166,11 +165,12 @@ out.addEventListener("change", inputChange);
 
 function inputChange() {
     if (a == '' && b == '') {
-        a = out.value
-    } else if (a !== '' && sign !== '' && b == '') {
-        b = out.value
+        a += out.value
+    } else if (b == '' && a !== '' && sign !== '' ) {
+        b += out.value
     } else if (a !== '' && b !== '' && sign !== '') {
-
+        clearAll();
+        a += out.value
     }
 
     console.log(a, b)
@@ -179,7 +179,8 @@ function inputChange() {
 (function () {
     out.addEventListener('keydown', function (e) {
         if (e.keyCode === 13) {
-            // if (b === '') {b = a};
+            out.blur();
+            if (b === '') {b = a};
             switch (sign) {
                 case "+":
                     a = (+a) + (+b);
