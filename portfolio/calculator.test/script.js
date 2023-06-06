@@ -78,6 +78,9 @@ function onNumberPressed(number) {
   } else if (number2 === null) {
     number2 = number;
     input.value = number2;
+  } else if (operation !== null) {
+    number2 += number;
+    input.value = number2;
   }
 }
 
@@ -145,7 +148,7 @@ function onButtonPress(buttonType) {
       break;
   }
 
-  //   console.log(number1, operation, number2);
+  console.log(number1, operation, number2);
 }
 
 function setOperation(buttonType) {
@@ -153,7 +156,7 @@ function setOperation(buttonType) {
 }
 
 function clearAll() {
-  input.value = "";
+  input.value = "0";
   number1 = null;
   number2 = null;
   operation = null;
