@@ -1,8 +1,59 @@
 class Calculator {
-  constructor() {
-    this.buttonsList = [
+  constructor(parent) {
+    this.number1 = null;
+    this.number2 = null;
+    this.operation = null;
+
+    const calculator = this.createMainDiv(parent);
+
+    this.input = this.createInput(calculator);
+    document.onkeydown = (event) => this.onButtonPress(event.key);
+
+    const buttonsDiv = this.createButtonsDiv(calculator);
+
+    this.createButtons(buttonsDiv);
+  }
+
+  createMainDiv(parent) {
+    const div = document.createElement("div");
+    div.classList.add('calculator-box');
+    parent.appendChild(div);
+    return div;
+  }
+
+  createInput(calculator) {
+    const input = document.createElement("input");
+
+    input.className = "conclusion";
+    input.type = "text";
+    input.value = 0;
+    input.readOnly = true;
+
+    calculator.appendChild(input);
+    return input;
+  }
+
+  createButtonsDiv(calculator) {
+    const buttonsDiv = document.createElement("div");
+    buttonsDiv.className = "button-box";
+
+    calculator.appendChild(buttonsDiv);
+    return buttonsDiv;
+  }
+
+  createButton(buttonData) {
+    const button = document.createElement("button");
+    button.className = buttonData.class;
+    button.textContent = buttonData.value;
+    button.id = buttonData.id;
+
+    return button;
+  }
+
+  createButtons(buttonsDiv) {
+    [
       { id: "as", class: "btn as bg-grey", value: "as" },
-      { id: "plusMinus", class: "btn plusMinus bg-grey", value: "+/-" },
+      { id: "delete", class: "btn delete bg-grey", value: "<" },
       { id: "percent", class: "btn percent bg-grey", value: "%" },
       { id: "division", class: "btn division bg-orange", value: "/" },
       { id: "seven", class: "btn seven", value: "7" },
@@ -20,61 +71,7 @@ class Calculator {
       { id: "zero", class: "btn zero", value: "0" },
       { id: "dot", class: "btn dot", value: "." },
       { id: "equal", class: "btn equal bg-orange", value: "=" },
-    ];
-    this.number1 = null;
-    this.number2 = null;
-    this.operation = null;
-
-    this.calculatorDiv = this.createMainDiv();
-    document.body.appendChild(this.calculatorDiv);
-
-    this.input = this.createInput();
-    this.calculatorDiv.appendChild(this.input);
-    document.onkeydown = (event) => onButtonPress(event.key);
-
-    this.buttonsDiv = this.createButtonsDiv();
-    this.calculatorDiv.appendChild(this.buttonsDiv);
-
-    this.createButtons(this.buttonsList, this.buttonsDiv);
-
-
-  }
-
-  createMainDiv() {
-    const div = document.createElement("div");
-    div.classList.add('calculator-box');
-    return div;
-  }
-
-  createInput() {
-    const input = document.createElement("input");
-
-    input.className = "conclusion";
-    input.type = "text";
-    input.value = 0;
-    input.readOnly = true;
-
-    return input;
-  }
-
-  createButtonsDiv() {
-    const buttonsDiv = document.createElement("div");
-    buttonsDiv.className = "button-box";
-
-    return buttonsDiv;
-  }
-
-  createButton(buttonData) {
-    const button = document.createElement("button");
-    button.className = buttonData.class;
-    button.textContent = buttonData.value;
-    button.id = buttonData.id;
-
-    return button;
-  }
-
-  createButtons(buttonsList, buttonsDiv) {
-    buttonsList.forEach((buttonData) => {
+    ].forEach((buttonData) => {
       const button = this.createButton(buttonData);
 
       button.onclick = () => this.onButtonPress(buttonData.value);
@@ -120,22 +117,40 @@ class Calculator {
       buttonType === "7" ||
       buttonType === "8" ||
       buttonType === "9"
-    );
+  );
   }
 
   getButtonType(buttonType) {
-    if (this.isOperation(buttonType)) {
-      return "operator";
-    } else if (this.isNumber(buttonType)) {
-      return "number";
-    } else if (buttonType === "as") {
-      return "clear";
-    } else if (buttonType === "=" || buttonType === "Enter") {
-      return "result";
-    } else if (buttonType === "=" && this.number2 === null || buttonType === "Enter" && this.number2 === null) {
-      return "result";
-    } else {
-      throw new Error("Unknown button type");
+    switch (buttonType) {
+      case "0":
+      case "1":
+      case "2":
+      case "3":
+      case "4":
+      case "5":
+      case "6":
+      case "7":
+      case "8":
+      case "9":
+        return "number";
+        break;
+      case "+":
+      case "-":
+      case "X":
+      case "/":
+        return "operator";
+        break;
+      case "=":
+      case "Enter":
+        return "result";
+        break;
+      case "<":
+      case "Backspace":
+        return "delete";
+        break;
+      default:
+        throw new Error("Unknown button type");
+        break;
     }
   }
 
@@ -163,6 +178,9 @@ class Calculator {
       case "result":
         this.updateResult();
         break;
+      case "delete":
+        this.deleteLastNumber();
+        break;
     }
 
     console.log(this.number1, this.operation, this.number2);
@@ -170,6 +188,10 @@ class Calculator {
 
   setOperation(buttonType) {
     this.operation = buttonType;
+  }
+
+  deleteLastNumber() {
+    this.input.value = this.input.value.slice(0, -1);
   }
 
   clearAll() {
@@ -201,8 +223,6 @@ class Calculator {
 
     return res;
   }
-
-
 }
 
-let calculator = new Calculator(document.getElementsByClassName('calculator-box'))
+new Calculator(document.getElementById("parent"));
