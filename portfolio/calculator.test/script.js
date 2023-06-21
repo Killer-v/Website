@@ -97,27 +97,13 @@ class Calculator {
   }
 
   isOperation(buttonType) {
-    return (
-      buttonType === "+" ||
-      buttonType === "-" ||
-      buttonType === "X" ||
-      buttonType === "/"
-    );
+    return ["+", "-", "X", "/"].includes(buttonType);
   }
 
   isNumber(buttonType) {
-    return (
-      buttonType === "0" ||
-      buttonType === "1" ||
-      buttonType === "2" ||
-      buttonType === "3" ||
-      buttonType === "4" ||
-      buttonType === "5" ||
-      buttonType === "6" ||
-      buttonType === "7" ||
-      buttonType === "8" ||
-      buttonType === "9"
-  );
+    return ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].includes(
+      buttonType
+    );
   }
 
   getButtonType(buttonType) {
@@ -140,6 +126,9 @@ class Calculator {
       case "/":
         return "operator";
         break;
+      case "as":
+        return "clear";
+        break
       case "=":
       case "Enter":
         return "result";
@@ -157,7 +146,7 @@ class Calculator {
   updateResult() {
     this.input.value = this.getResult(this.number1, this.number2, this.operation);
     this.number1 = this.input.value * 1;
-    this.number2 = this.input.value * 1;
+    this.number2 = null;
   }
 
   onButtonPress(buttonType) {
@@ -192,6 +181,11 @@ class Calculator {
 
   deleteLastNumber() {
     this.input.value = this.input.value.slice(0, -1);
+    if(this.number2 === null) {
+      this.number1 = this.number1.slice(0, -1);
+    } else {
+      this.number2 = this.number2.slice(0, -1);
+    }
   }
 
   clearAll() {
