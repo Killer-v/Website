@@ -8,8 +8,8 @@ body{
     align-items: center;
 }
 .calculator-box{
-    width: 300px;
-    height: 500px;
+    width: 56%;
+    margin: 0 auto;
     padding: 20px;
     border-radius: 30px;
     background-color: #1d1d20;
@@ -18,7 +18,6 @@ body{
 }
 .conclusion{
     width: 100%;
-    height: 18%;
     outline: none;
     color: azure;
     background-color: #1d1d20;
@@ -27,8 +26,6 @@ body{
     font-size: 40px;
 }
 .btn{
-    width: 60px;
-    height: 60px;
     border-radius: 50%;
     color: #fff;
     border: none;
@@ -47,7 +44,6 @@ body{
 }
 .button-box{
     display: grid;
-    justify-content: space-between;
     grid-template-areas: 
     "as plus-minus percent division"
     "seven eigth nine multi"
@@ -67,13 +63,8 @@ body{
     width: 100%;
     border-radius: 30px;
 }
-@media (max-width: 360px) {
+@media (max-width: 380px) {
     .calculator-box {
         width: auto;
-    }
-    body {
-        width: 100%;
-        height: 92vh;
-        align-items: stretch;
     }
 }
