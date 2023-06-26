@@ -63,9 +63,12 @@ body{
     width: 100%;
     border-radius: 30px;
 }
-@media (max-width: 380px) {
+@media (max-height: 450px) {
     .calculator-box {
-        width: auto;
+        width: 72%;
+    }
+    .button-box {
+        gap: 3px;
     }
 }
 @media (max-width: 450px) {
@@ -73,3 +76,9 @@ body{
         width: 73%;
     }
 }
+@media (max-width: 380px) {
+    .calculator-box {
+        width: auto;
+    }
+}
+
