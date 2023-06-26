@@ -118,6 +118,7 @@ class Calculator {
       case "7":
       case "8":
       case "9":
+      case ".":
         return "number";
         break;
       case "+":
@@ -181,7 +182,7 @@ class Calculator {
 
   deleteLastNumber() {
     this.input.value = this.input.value.slice(0, -1);
-    if(this.number2 === null) {
+    if (this.number2 === null) {
       this.number1 = this.number1.slice(0, -1);
     } else {
       this.number2 = this.number2.slice(0, -1);
