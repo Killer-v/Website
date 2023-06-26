@@ -68,3 +68,8 @@ body{
         width: auto;
     }
 }
+@media (max-width: 450px) {
+    .calculator-box {
+        width: 73%;
+    }
+}
