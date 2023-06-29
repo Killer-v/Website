@@ -72,7 +72,9 @@ class Calculator {
       { id: "dot", class: "btn dot", value: "." },
       { id: "equal", class: "btn equal bg-orange", value: "=" },
     ].forEach((buttonData) => {
+
       const button = this.createButton(buttonData);
+      button.style.gridArea = buttonData.id;
 
       button.onclick = () => this.onButtonPress(buttonData.value);
 
@@ -83,16 +85,20 @@ class Calculator {
   onNumberPressed(number) {
     if (this.number1 === null) {
       this.number1 = number;
-      this.input.value = this.number1;
+      // this.input.value = this.number1;
+      this.input.value = Number(this.number1);
     } else if (this.operation === null) {
       this.number1 += number;
-      this.input.value = this.number1;
+      // this.input.value = this.number1;
+      this.input.value = Number(this.number1);
     } else if (this.number2 === null) {
       this.number2 = number;
-      this.input.value = this.number2;
+      // this.input.value = this.number2;
+      this.input.value = Number(this.number2);
     } else if (this.operation !== null) {
       this.number2 += number;
-      this.input.value = this.number2;
+      // this.input.value = this.number2;
+      this.input.value = Number(this.number2);
     }
   }
 
@@ -119,6 +125,7 @@ class Calculator {
       case "8":
       case "9":
       case ".":
+      case ",":
         return "number";
         break;
       case "+":
@@ -138,9 +145,6 @@ class Calculator {
       case "Backspace":
         return "delete";
         break;
-      default:
-        throw new Error("Unknown button type");
-        break;
     }
   }
 
@@ -157,6 +161,9 @@ class Calculator {
 
     switch (this.getButtonType(buttonType)) {
       case "number":
+        if (buttonType === ",") {
+          buttonType = ".";
+        }
         this.onNumberPressed(buttonType);
         break;
       case "operator":
