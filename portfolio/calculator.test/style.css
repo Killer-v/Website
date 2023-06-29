@@ -44,7 +44,7 @@ body {
 }
 
 /* height */
-@media (max-width: 590px) and (max-height: 340px), (max-height: 340px){
+@media (max-width: 590px) and (max-height: 465px), (max-height: 340px){
     .conclusion {
         font-size: 33px;
     }
@@ -81,13 +81,13 @@ body {
 }
 
 /* height */
-@media (min-width: 100px) and (max-height: 465px){
+@media (min-width: 350px) and (max-height: 465px){
     #plus, #minus {
         width: 100%;
         border-radius: 30px;
     }
 }
-@media (max-width: 590px) and (max-height: 340px), (max-height: 340px){
+@media (max-width: 590px) and (max-height: 465px), (max-height: 340px){
     .btn {
         width: 40px;
         height: 40px;
@@ -126,7 +126,7 @@ body {
 }
 
 /* height */
-@media (min-width: 100px) and (max-height: 465px) {
+@media (min-width: 350px) and (max-height: 465px) {
     .button-box {
         grid-template-areas:
             "as delete percent division myltiply plus plus"
@@ -135,7 +135,7 @@ body {
         ;
     }
 }
-@media (max-width: 590px) and (max-height: 340px), (max-height: 340px){
+@media (max-width: 590px) and (max-height: 465px), (max-height: 340px){
     .button-box {
         gap: 4px;
     }
