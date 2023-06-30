@@ -82,23 +82,39 @@ class Calculator {
     });
   }
 
+  onDotPressed() {
+    if (this.number1 === null) {
+      this.number1 = "0.";
+      this.input.value = this.number1;
+    } else if (this.operation === null) {
+      if (!this.number1.includes(".")) {
+        this.number1 += ".";
+        this.input.value = this.number1;
+      }
+    } else if (this.number2 === null) {
+      this.number2 = "0.";
+      this.input.value = this.number2;
+    } else if (this.operation !== null) {
+      if (!this.number2.includes(".")) {
+        this.number2 += ".";
+        this.input.value = this.number2;
+      }
+    }
+  }
+
   onNumberPressed(number) {
     if (this.number1 === null) {
       this.number1 = number;
-      // this.input.value = this.number1;
-      this.input.value = Number(this.number1);
+      this.input.value = this.number1;
     } else if (this.operation === null) {
       this.number1 += number;
-      // this.input.value = this.number1;
-      this.input.value = Number(this.number1);
+      this.input.value = this.number1;
     } else if (this.number2 === null) {
       this.number2 = number;
-      // this.input.value = this.number2;
-      this.input.value = Number(this.number2);
+      this.input.value = this.number2;
     } else if (this.operation !== null) {
       this.number2 += number;
-      // this.input.value = this.number2;
-      this.input.value = Number(this.number2);
+      this.input.value = this.number2;
     }
   }
 
@@ -124,27 +140,24 @@ class Calculator {
       case "7":
       case "8":
       case "9":
+        return "number";
       case ".":
       case ",":
-        return "number";
-        break;
+        return "dot";
       case "+":
       case "-":
       case "X":
       case "/":
+      case "%":
         return "operator";
-        break;
       case "as":
         return "clear";
-        break
       case "=":
       case "Enter":
         return "result";
-        break;
       case "<":
       case "Backspace":
         return "delete";
-        break;
     }
   }
 
@@ -161,10 +174,13 @@ class Calculator {
 
     switch (this.getButtonType(buttonType)) {
       case "number":
+        this.onNumberPressed(buttonType);
+        break;
+      case "dot":
         if (buttonType === ",") {
           buttonType = ".";
         }
-        this.onNumberPressed(buttonType);
+        this.onDotPressed();
         break;
       case "operator":
         this.setOperation(buttonType);
@@ -220,6 +236,9 @@ class Calculator {
         break;
       case "/":
         res = value1 / value2;
+        break;
+      case "%":
+        res = value1 / 100 * value2;
         break;
     }
 
