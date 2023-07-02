@@ -102,6 +102,21 @@ class Calculator {
     }
   }
 
+  onPercentPressed(){
+    if (this.number1 !== null && this.number2 === null) {
+      this.input.value = this.number1 / 100;
+      this.number1 = this.input.value;
+    } else if (this.number1 !== null && this.number2 !== null && this.operation !== null) {
+      let percentValue = (this.number1 / 100) * this.number2;
+      let result = this.getResult(this.number1, percentValue, this.operation);
+      this.input.value = result;
+      this.number1 = result;
+      this.number2 = null;
+      this.operation = null;
+      console.log(result);
+    }
+  }
+
   onNumberPressed(number) {
     if (this.number1 === null) {
       this.number1 = number;
@@ -147,9 +162,11 @@ class Calculator {
       case "+":
       case "-":
       case "X":
+      case "*":
       case "/":
-      case "%":
         return "operator";
+      case "%":
+        return "percent";
       case "as":
         return "clear";
       case "=":
@@ -176,6 +193,9 @@ class Calculator {
       case "number":
         this.onNumberPressed(buttonType);
         break;
+      case "percent":
+        this.onPercentPressed();
+        break;
       case "dot":
         if (buttonType === ",") {
           buttonType = ".";
@@ -183,6 +203,9 @@ class Calculator {
         this.onDotPressed();
         break;
       case "operator":
+        if (buttonType === "*") {
+          buttonType = "X";
+        }
         this.setOperation(buttonType);
         break;
       case "clear":
@@ -238,7 +261,7 @@ class Calculator {
         res = value1 / value2;
         break;
       case "%":
-        res = value1 / 100 * value2;
+        res = value2 / 100 * value1;
         break;
     }
 
