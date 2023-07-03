@@ -107,13 +107,8 @@ class Calculator {
       this.input.value = this.number1 / 100;
       this.number1 = this.input.value;
     } else if (this.number1 !== null && this.number2 !== null && this.operation !== null) {
-      let percentValue = (this.number1 / 100) * this.number2;
-      let result = this.getResult(this.number1, percentValue, this.operation);
-      this.input.value = result;
-      this.number1 = result;
-      this.number2 = null;
-      this.operation = null;
-      console.log(result);
+      this.number2 = (this.number1 / 100) * this.number2;
+      this.input.value = this.number2;
     }
   }
 
